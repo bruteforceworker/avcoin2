@@ -2619,7 +2619,7 @@ bool LoadBlockIndex(bool fAllowNew)
             return false;
 
         // Genesis block
-        const char* pszTimestamp = "Tole je pa že resen coin moj trteji po vrsti,..";
+        const char* pszTimestamp = "Esx+SSD trga gate";
         CTransaction txNew;
         txNew.nTime = nChainStartTime;
         txNew.vin.resize(1);
@@ -2632,9 +2632,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1410637815; //sobota, 13 Sep 2014 
+        block.nTime    = 1411206238; //sobota, 20 Sep 2014 
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 2881743;
+        block.nNonce   = 1908758;
 
         if (false  && (block.GetHash() != hashGenesisBlock)) {
 	 
@@ -2661,7 +2661,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
 
-        assert(block.hashMerkleRoot == uint256("0x90036c6e536b23e6615745207df2444466b092ae15ace5ec4c3474b82586344f"));//prej se je zacel na c044...
+        assert(block.hashMerkleRoot == uint256("0x43daded054ac7e2f839195a1ea321c46d952a29c680c252f4f268a908d5eaaf7"));//prej se je zacel na 90036...
 		assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
 
         // Start new block file
